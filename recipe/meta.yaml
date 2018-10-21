@@ -10,15 +10,13 @@ package:
 source:
   fn: dynamicTreeCut_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/dynamicTreeCut_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/dynamicTreeCut/dynamicTreeCut_{{ version }}.tar.gz
-
+    - {{ cran_mirror }}/src/contrib/dynamicTreeCut_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/dynamicTreeCut/dynamicTreeCut_{{ version }}.tar.gz
   sha256: 831307f64eddd68dcf01bbe2963be99e5cde65a636a13ce9de229777285e4db9
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,7 +24,6 @@ build:
 requirements:
   build:
     - r-base
-
   run:
     - r-base
 
@@ -40,10 +37,9 @@ about:
   license: GPL (>= 2)
   summary: Contains methods for detection of clusters in hierarchical clustering dendrograms.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}\/lib\/R\/share\/licenses\/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 extra:
    recipe-maintainers:
+    - dpryan79
     - MathiasHaudgaard
     - FrodePedersen
     - ArneKr
