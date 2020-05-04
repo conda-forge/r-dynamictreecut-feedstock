@@ -1,4 +1,4 @@
-{% set version = '1.63-1' %}
+{% set version = "1.63-1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -16,7 +16,7 @@ source:
 
 build:
   noarch: generic
-  number: 1002
+  number: 1003
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,11 +34,13 @@ test:
 
 about:
   home: https://cran.r-project.org/web/packages/dynamicTreeCut/index.html
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Contains methods for detection of clusters in hierarchical clustering dendrograms.
   license_family: GPL3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 extra:
-   recipe-maintainers:
+  recipe-maintainers:
     - conda-forge/r
     - dpryan79
     - MathiasHaudgaard
