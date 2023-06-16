@@ -1,11 +1,11 @@
-About r-dynamictreecut
-======================
+About r-dynamictreecut-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dynamictreecut-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.genetics.ucla.edu/labs/horvath/CoexpressionNetwork/BranchCutting/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dynamictreecut-feedstock/blob/main/LICENSE.txt)
 
 Summary: Contains methods for detection of clusters in hierarchical clustering dendrograms.
 
